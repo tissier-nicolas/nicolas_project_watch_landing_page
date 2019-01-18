@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Coiny');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+body {
+  font-size: 15px;
+  text-align: center;
+  font-family: 'Coiny';
+}
+
+.wrapper {
+  background: url("../images/bg.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  @include flex_row();
+}
+
+#trait_dessus {
+  border-top: 2px solid #000;
+  opacity: 0.3;
+  width: 16vw;
+  margin: auto auto 1vh;
+}
+
+#trait_dessous {
+  border-top: 2px solid #000;
+  opacity: 0.3;
+  width: 16vw;
+  margin: -2vh auto auto;
+}
+
+.svg {
+  background: url("../images/chef.svg");
+  width: 5vh;
+  height: 2vw;
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.content {
+  .background {
+    background-color: #E29623;
+    padding: 9vh 4vw 12vh;
+    width: 33vw;
+    text-align: center;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 0 60px 0 rgba(0,0,0,0.75);
+    box-shadow: 0 0 60px 0 rgba(0,0,0,0.75);
+    opacity: 0.85;
+
+    h1 {
+      font-family: 'Coiny';
+      font-size: 4.25em;
+      line-height: 3vh;
+      color: #490306;
+      padding-top: 12vh;
+      padding-bottom: 12vh;
+    }
+
+    p {
+      font-size: 2em;
+      margin-top: 4vh;
+
+      span {
+        &:first-child {
+          color: white;
+        }
+
+        &:nth-child(2) {
+          color: #78191E;
+          font-size: 1em;
+        }
+
+        &:nth-child(3) {
+          color: white;
+        }
+      }
+    }
+  }
+}

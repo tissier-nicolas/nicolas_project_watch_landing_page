@@ -1,2 +1,5 @@
-# exo_montre
-landing_page
+## Lancement du serveur de dév
+```bash
+npm install
+npm run serve
+```
