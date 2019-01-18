@@ -5,7 +5,6 @@
 @mixin flex_row() {
   display: flex;
   flex-direction: row;
-  flex-flow: row-wrap;
 }
 
 @mixin flex_column() {
