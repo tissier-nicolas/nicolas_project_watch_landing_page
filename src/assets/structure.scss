@@ -31,16 +31,20 @@ header {
 .header_content {
   .nav--menu {
     text-align: center;
+
     ul {
       @include flex_row();
       align-items: center;
       justify-content: center;
+
       li {
         padding: 5vh 2vw;
+
         &.logo {
           order: 4;
           position: relative;
           padding: 0;
+
           figure {
             background: url("../images/logo_gentleman_time.svg") no-repeat;
             background-position: center 23px;
@@ -49,6 +53,7 @@ header {
             z-index: 2;
             position: relative;
           }
+
           &:before {
             display: block;
             content: "";
@@ -63,24 +68,31 @@ header {
             z-index: 1;
           }
         }
+
         &:nth-child(2) {
           order: 1;
         }
+
         &:nth-child(3) {
           order: 2;
         }
+
         &:nth-child(4) {
           order: 3;
         }
+
         &:nth-child(5) {
           order: 5;
         }
+
         &:nth-child(6) {
           order: 6;
         }
+
         &:nth-child(7) {
           order: 7;
         }
+
         a {
           color: black;
           padding: 2vh;
@@ -93,18 +105,99 @@ header {
 main {
   background: url("../images/pocket_watch_2.jpg") center no-repeat;
   background-size: cover;
-  height: 100vh;
-  h1 {
-    font-family: 'Playfair Display';
-    font-weight: 700;
-    line-height: 18vh;
-    color: #ffffff;
-    padding-top: 4vh;
-    padding-left: 4vw;
-    font-size: 16em;
-  }
-}
+  height: 84vh;
+  align-items: center;
+  justify-content: center;
 
-.content {
-  @include flex_row();
+  .main_1 {
+    background-color: rgba(0,0,0,0.85);
+    text-align: center;
+    padding: 8vh 4vw;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 0 60px 0 rgba(0,0,0,0.55);
+    box-shadow: 0 0 60px 0 rgba(0,0,0,0.55);
+    animation-duration: 800ms;
+    animation-name: size;
+    height: 84vh;
+
+    h1 {
+      color: #ffffff;
+      font-weight: 900;
+      font-size: 6em;
+      margin: auto;
+      padding-top: 48vh;
+      animation-duration: 3s;
+      animation-name: color;
+
+      em {
+        color: #DE0000;
+        font-style: normal;
+        font-weight: 900;
+        animation-duration: 3s;
+        animation-name: color;
+      }
+    }
+
+    p {
+      font-weight: 300;
+      font-size: 2.4em;
+      margin: auto;
+      line-height: 3vh;
+      color: #ffffff;
+    }
+  }
+
+  .products {
+    /*background-color: rgba(0,0,0,0.85);*/
+    background: url("../video/background.jpg") center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    @include flex_row();
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+
+
+
+    .main_content_2 {
+      background-color: #ffffff;
+      opacity: .85;
+      text-align: center;
+      width: 40vw;
+      padding: 9vh 4vw 4vh;
+      border-radius: 8px;
+      -webkit-box-shadow: 0 0 60px 0 rgba(0,0,0,0.75);
+      box-shadow: 0 0 60px 0 rgba(0,0,0,0.75);
+      animation-duration: 800ms;
+      animation-name: size;
+      height: 60vh;
+      padding-right: 2vw;
+    }
+    .main_content_1_2 {
+
+
+      width: 2vw;
+      padding: 9vh 4vw 4vh;
+
+    }
+
+    .main_content_3 {
+      background-color: #ffffff;
+      opacity: .85;
+      text-align: center;
+      width: 400px;
+      padding: 9vh 4vw 4vh;
+      border-radius: 0px;
+      -webkit-box-shadow: 0 0 60px 0 rgba(255,255,255,0.75);
+      box-shadow: 0 0 60px 0 rgba(255,255,255,0.75);
+      animation-duration: 800ms;
+      animation-name: size;
+      height: 400px;
+      padding-left: 2vw;
+      transform: rotate(45deg);
+    
+    }
+  }
 }
