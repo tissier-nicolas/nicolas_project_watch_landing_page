@@ -39,6 +39,7 @@ header {
 
       li {
         padding: 5vh 2vw;
+        font-size: 1.2em;
 
         &.logo {
           order: 4;
@@ -47,11 +48,12 @@ header {
 
           figure {
             background: url("../images/logo_gentleman_time.svg") no-repeat;
-            background-position: center 23px;
+            background-position: center 20px;
             width: 150px;
             height: 150px;
             z-index: 2;
             position: relative;
+
           }
 
           &:before {
@@ -114,23 +116,27 @@ main {
     text-align: center;
     padding: 8vh 4vw;
     border-radius: 8px;
-    -webkit-box-shadow: 0 0 60px 0 rgba(0,0,0,0.55);
-    box-shadow: 0 0 60px 0 rgba(0,0,0,0.55);
     animation-duration: 800ms;
     animation-name: size;
     height: 84vh;
 
     h1 {
-      color: #ffffff;
+
       font-weight: 900;
       font-size: 6em;
       margin: auto;
       padding-top: 48vh;
       animation-duration: 3s;
       animation-name: color;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #FFFFFF;
 
       em {
-        color: #DE0000;
+
+        -webkit-text-fill-color: #DE0000;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #DE0000;
         font-style: normal;
         font-weight: 900;
         animation-duration: 3s;
@@ -142,14 +148,14 @@ main {
       font-weight: 300;
       font-size: 2.4em;
       margin: auto;
-      line-height: 3vh;
+      line-height: 8vh;
       color: #ffffff;
     }
   }
 
   .products {
-    /*background-color: rgba(0,0,0,0.85);*/
-    background: url("../video/background.jpg") center no-repeat;
+    background-color: rgba(0,0,0,0.85);
+    background: url("../images/background.jpg") center no-repeat;
     background-size: cover;
     height: 100vh;
     @include flex_row();
@@ -197,7 +203,7 @@ main {
       height: 400px;
       padding-left: 2vw;
       transform: rotate(45deg);
-    
+
     }
   }
 }
