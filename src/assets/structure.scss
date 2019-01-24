@@ -105,14 +105,14 @@ header {
 }
 
 main {
-  background: url("../images/pocket_watch_2.jpg") center no-repeat;
+  background: url("../images/background.jpg") center no-repeat;
   background-size: cover;
   height: 84vh;
   align-items: center;
   justify-content: center;
 
   .main_1 {
-    background-color: rgba(0,0,0,0.85);
+    background-color: rgba(0,0,0,0.50);
     text-align: center;
     padding: 8vh 4vw;
     border-radius: 8px;
@@ -125,7 +125,7 @@ main {
       font-weight: 900;
       font-size: 6em;
       margin: auto;
-      padding-top: 48vh;
+      padding-top: 36vh;
       animation-duration: 3s;
       animation-name: color;
       -webkit-text-fill-color: transparent;
@@ -134,13 +134,14 @@ main {
 
       em {
 
-        -webkit-text-fill-color: #DE0000;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: #DE0000;
+        -webkit-text-fill-color: #ffffff;
+        -webkit-text-stroke-width: 0px;
+        -webkit-text-stroke-color: #ffffff;
         font-style: normal;
         font-weight: 900;
         animation-duration: 3s;
         animation-name: color;
+        font-size: 0.8em;
       }
     }
 
@@ -154,8 +155,9 @@ main {
   }
 
   .products {
-    background-color: rgba(0,0,0,0.85);
-    background: url("../images/background.jpg") center no-repeat;
+
+    background: url("../images/background_2.jpg") center no-repeat;
+    background-color: rgba(0,0,0,0.50);
     background-size: cover;
     height: 100vh;
     @include flex_row();
@@ -163,45 +165,15 @@ main {
     align-items: center;
     justify-content: center;
 
-
-
-
-
-    .main_content_2 {
+    .main_content_1 {
       background-color: #ffffff;
-      opacity: .85;
       text-align: center;
-      width: 40vw;
-      padding: 9vh 4vw 4vh;
-      border-radius: 8px;
-      -webkit-box-shadow: 0 0 60px 0 rgba(0,0,0,0.75);
-      box-shadow: 0 0 60px 0 rgba(0,0,0,0.75);
-      animation-duration: 800ms;
-      animation-name: size;
-      height: 60vh;
-      padding-right: 2vw;
-    }
-    .main_content_1_2 {
-
-
-      width: 2vw;
-      padding: 9vh 4vw 4vh;
-
-    }
-
-    .main_content_3 {
-      background-color: #ffffff;
-      opacity: .85;
-      text-align: center;
-      width: 400px;
+      align-items: center;
+      width: 800px;
       padding: 9vh 4vw 4vh;
       border-radius: 0px;
-      -webkit-box-shadow: 0 0 60px 0 rgba(255,255,255,0.75);
-      box-shadow: 0 0 60px 0 rgba(255,255,255,0.75);
-      animation-duration: 800ms;
-      animation-name: size;
-      height: 400px;
-      padding-left: 2vw;
+      height: 800px;
+      padding-left: 8vw;
       transform: rotate(45deg);
 
     }
