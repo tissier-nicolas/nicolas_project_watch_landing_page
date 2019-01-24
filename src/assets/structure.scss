@@ -39,7 +39,7 @@ header {
 
       li {
         padding: 5vh 2vw;
-        font-size: 1.2em;
+        font-size: 1em;
 
         &.logo {
           order: 4;
@@ -48,12 +48,10 @@ header {
 
           figure {
             background: url("../images/logo_gentleman_time.svg") no-repeat;
-            background-position: center 20px;
             width: 150px;
             height: 150px;
             z-index: 2;
             position: relative;
-
           }
 
           &:before {
@@ -105,23 +103,20 @@ header {
 }
 
 main {
-  background: url("../images/background.jpg") center no-repeat;
+  background: url("../images/pocket_watch_2.jpg") center no-repeat;
   background-size: cover;
   height: 84vh;
   align-items: center;
   justify-content: center;
 
   .main_1 {
-    background-color: rgba(0,0,0,0.50);
+    background-color: rgba(0,0,0,0.75);
     text-align: center;
     padding: 8vh 4vw;
     border-radius: 8px;
-    animation-duration: 800ms;
-    animation-name: size;
     height: 84vh;
 
     h1 {
-
       font-weight: 900;
       font-size: 6em;
       margin: auto;
@@ -132,15 +127,18 @@ main {
       -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: #FFFFFF;
 
-      em {
+      .em_1 {
+        -webkit-text-fill-color: red;
+        -webkit-text-stroke-width: 0;
+        -webkit-text-stroke-color: red;
+      }
 
+      em {
         -webkit-text-fill-color: #ffffff;
-        -webkit-text-stroke-width: 0px;
+        -webkit-text-stroke-width: 0;
         -webkit-text-stroke-color: #ffffff;
         font-style: normal;
         font-weight: 900;
-        animation-duration: 3s;
-        animation-name: color;
         font-size: 0.8em;
       }
     }
@@ -155,8 +153,7 @@ main {
   }
 
   .products {
-
-    background: url("../images/background_2.jpg") center no-repeat;
+    background: url("../images/pocket_watch_2.jpg") center no-repeat;
     background-color: rgba(0,0,0,0.50);
     background-size: cover;
     height: 100vh;
@@ -165,17 +162,34 @@ main {
     align-items: center;
     justify-content: center;
 
-    .main_content_1 {
-      background-color: #ffffff;
-      text-align: center;
-      align-items: center;
-      width: 800px;
-      padding: 9vh 4vw 4vh;
-      border-radius: 0px;
-      height: 800px;
-      padding-left: 8vw;
-      transform: rotate(45deg);
+    .black_opacity {
+      background-color: rgba(0,0,0,0.75);
+      padding: 8vh 4vw;
+      border-radius: 8px;
+      height: 100vh;
+      width: 100vw;
+      @include flex_center();
 
+      .watch_1 {
+        background-color: #ffffff;
+        text-align: center;
+        align-items: center;
+        padding: 8vh 4vw;
+        border-radius: 8px;
+        height: 40vh;
+        width: 40vw;
+        @include flex_center();
+      }
+      .watch_2 {
+        background-color: #ffffff;
+        text-align: center;
+        align-items: center;
+        padding: 8vh 4vw;
+        border-radius: 8px;
+        height: 40vh;
+        width: 40vw;
+        @include flex_center();
+      }
     }
   }
 }
