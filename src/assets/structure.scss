@@ -149,15 +149,13 @@ main {
       margin: auto;
       line-height: 8vh;
       color: #ffffff;
-      
     }
   }
 
   .products {
     background: url("../images/background_4.jpg") center no-repeat;
-    background-color: rgba(0,0,0,0.50);
     background-size: cover;
-    height: 110vh;
+    height: 100vh;
     width: auto;
     @include flex_row();
     display: flex;
@@ -165,16 +163,15 @@ main {
     justify-content: center;
 
     .white_opacity {
-      background-color: rgba(255,255,255,0.75);
+      background-color: #000000;
       padding: 8vh 4vw;
       border-radius: 8px;
-      height: 110vh;
+      height: 100vh;
       width: 100vw;
       @include flex_center();
 
       .watch_1 {
         background: url("../images/watch_2.jpg") center no-repeat;
-
         height: 68vh;
         width: 40vw;
       }
@@ -188,7 +185,7 @@ main {
         color: #ffffff;
 
         h2 {
-          margin-top: 8vh;
+          margin-top: 20vh;
           font-size: 4em;
           letter-spacing: 2vw;
           line-height: 1.4em;
@@ -201,15 +198,32 @@ main {
           }
 
           em {
-            -webkit-text-fill-color: red;
             letter-spacing: 0.6vw;
           }
         }
 
-        p {
-          margin-top: 4vh;
+        .bouton a {
+          display: block;
+          width: 150px;
+          line-height: 50px;
+          text-align: center;
+          vertical-align: middle;
+          color: red;
+          text-decoration: none;
+          margin: auto;
+          margin-top: 8vh;
           font-size: 2em;
         }
+
+        .bouton a:hover {
+          background-color: white;
+          color: black;
+          text-align: center;
+
+
+        }
+
+
       }
     }
   }
