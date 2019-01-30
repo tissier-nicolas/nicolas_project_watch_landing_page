@@ -2,7 +2,6 @@
 
 * {
   margin: 0;
-  padding: 0;
   border: none;
   list-style: none;
   text-decoration: none;
@@ -96,6 +95,28 @@ header {
         a {
           color: black;
           padding: 2vh;
+
+                }
+
+        a.effect-underline:after {
+          content: '';
+
+          left: 0;
+          display: inline-block;
+          width: 80%;
+          border-bottom: 2px solid;
+          margin-top: 4px;
+          opacity: 0;
+          -webkit-transition: opacity 0.60s, -webkit-transform 0.60s;
+          transition: opacity 0.60s, transform 0.60s;
+          -webkit-transform: scale(0,1);
+          transform: scale(0,1);
+        }
+
+        a.effect-underline:hover:after {
+          opacity: 1;
+          -webkit-transform: scale(1);
+          transform: scale(1);
         }
       }
     }
@@ -115,6 +136,16 @@ main {
     padding: 8vh 4vw;
     border-radius: 8px;
     height: 84vh;
+
+/* responsive */
+
+    /*@media screen and (max-width: 640px) {
+      main {
+
+      }
+    }*/
+
+    /* FIN responsive */
 
     h1 {
       font-weight: 900;
@@ -151,8 +182,6 @@ main {
   }
 
   .products {
-    background: url("../images/background_4.jpg") center no-repeat;
-    background-size: cover;
     height: 100vh;
     width: auto;
     @include flex_row();
@@ -160,18 +189,25 @@ main {
     align-items: center;
     justify-content: center;
 
-    .white_opacity {
+    .black_bg {
       background-color: #000000;
       padding: 8vh 4vw;
       height: 100vh;
       width: 100vw;
       @include flex_center();
 
+      @media screen and (max-width: 640px) {
+        .black_bg {
+
+        }
+      }
+
       .watch_1 {
         background: url("../images/watch_2.jpg") center no-repeat;
         height: 68vh;
         width: 40vw;
       }
+
 
       .texte_watch_1 {
         background-color: #000000;
@@ -194,7 +230,6 @@ main {
             -webkit-text-stroke-color: #FFFFFF;
             letter-spacing: 1.2vw;
             font-size: 0.8em;
-
           }
 
           em {
