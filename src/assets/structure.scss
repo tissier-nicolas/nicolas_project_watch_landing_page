@@ -3,8 +3,7 @@
 * {
   margin: 0;
   border: none;
-  list-style: none;
-  text-decoration: none;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -37,9 +36,15 @@ header {
       justify-content: center;
 
       li {
-        padding: 5vh 2vw;
-        font-size: 1em;
-
+        padding: 1.5vh 8vw;
+        list-style: none;
+        a {
+          text-decoration: none;
+          color: #000;
+          display: block;
+          position: relative;
+          padding: .5vh 0;
+        }
         &.logo {
           order: 4;
           position: relative;
@@ -72,40 +77,22 @@ header {
           order: 1;
         }
 
-        &:nth-child(3) {
+        &:nth-child(2) {
           order: 2;
         }
 
-        &:nth-child(4) {
+        &:nth-child(3) {
           order: 3;
         }
 
-        &:nth-child(5) {
-          order: 5;
-        }
-
-        &:nth-child(6) {
-          order: 6;
-        }
-
-        &:nth-child(7) {
-          order: 7;
-        }
-
-        a {
-          color: black;
-          padding: 2vh;
-
-                }
-
         a.effect-underline:after {
           content: '';
-
+          position: absolute;
           left: 0;
+          bottom: 0;
           display: inline-block;
-          width: 80%;
+          width: 100%;
           border-bottom: 2px solid;
-          margin-top: 4px;
           opacity: 0;
           -webkit-transition: opacity 0.60s, -webkit-transform 0.60s;
           transition: opacity 0.60s, transform 0.60s;
@@ -126,55 +113,51 @@ header {
 main {
   background: url("../images/pocket_watch_2.jpg") center no-repeat;
   background-size: cover;
-  height: 84vh;
   align-items: center;
   justify-content: center;
-
+  background-attachment: fixed;
   .main_1 {
     background-color: rgba(0,0,0,0.80);
     text-align: center;
-    padding: 8vh 4vw;
-    border-radius: 8px;
-    height: 84vh;
+    padding: 8vh 8vw;
+    width: 100%;
 
-/* responsive */
+/* -------------------------------- responsive */
 
-    /*@media screen and (max-width: 640px) {
-      main {
+    @media screen and (max-width: 767px) {
 
-      }
-    }*/
+    }
 
-    /* FIN responsive */
+/* -------------------------------- FIN responsive */
 
     h1 {
       font-weight: 900;
-      font-size: 6em;
       margin: auto;
-      padding-top: 36vh;
+      padding: 15vh 0;
       animation-duration: 3s;
       animation-name: color;
       -webkit-text-fill-color: transparent;
       -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: #FFFFFF;
-      letter-spacing: 0.8vw;
 
-      .em_1 {
-        -webkit-text-fill-color: red;
-        -webkit-text-stroke-width: 0;
-        -webkit-text-stroke-color: red;
+      font-size: 6rem;
+      @media screen and (max-width: 767px) {
+        font-size: 3rem;
       }
-
       em {
         -webkit-text-fill-color: #ffffff;
         -webkit-text-stroke-width: 0;
         -webkit-text-stroke-color: #ffffff;
         font-style: normal;
         font-weight: 900;
-        font-size: 0.8em;
+        font-size: 4rem;
+        &:first-child {
+            -webkit-text-fill-color: red;
+            -webkit-text-stroke-width: 0;
+            -webkit-text-stroke-color: red;
+        }
       }
     }
-
     .arrow {
       background: url("../images/arrow.svg") center no-repeat;
       height: 200px;
@@ -182,45 +165,39 @@ main {
   }
 
   .products {
-    height: 100vh;
-    width: auto;
     @include flex_row();
-    display: flex;
     align-items: center;
     justify-content: center;
-
+    @media screen and (min-width: 768px) {
+    height: 100vh;
+    }
     .black_bg {
-      background-color: #000000;
-      padding: 8vh 4vw;
-      height: 100vh;
+      background-color: black;
       width: 100vw;
+      @media screen and (min-width: 768px) {
+      height: 100vh;
+
+      }
       @include flex_center();
-
-      @media screen and (max-width: 640px) {
-        .black_bg {
-
-        }
+     .watch_1 {
+          img {
+            width: auto;
+            height: 100%;
+            margin: auto;
+            @media screen and (max-width: 767px) {
+            width: 100%;
+            height: auto;
+            }
+          }
       }
-
-      .watch_1 {
-        background: url("../images/watch_2.jpg") center no-repeat;
-        height: 68vh;
-        width: 40vw;
-      }
-
-
       .texte_watch_1 {
-        background-color: #000000;
-        text-align: center;
-        align-items: center;
-        height: 68vh;
-        width: 50vw;
+        padding: 8vh 6vw;
         color: #ffffff;
-
+        @include flex_column();
+        justify-content: center;
         h2 {
-          margin-top: 20vh;
-          font-size: 4em;
-          letter-spacing: 2.4vw;
+          font-size: 4rem;
+          letter-spacing: .8vw;
           line-height: 1em;
           @include flex_column();
 
@@ -229,7 +206,7 @@ main {
             -webkit-text-stroke-width: 0.8px;
             -webkit-text-stroke-color: #FFFFFF;
             letter-spacing: 1.2vw;
-            font-size: 0.8em;
+            font-size: 2rem;
           }
 
           em {
@@ -239,21 +216,25 @@ main {
 
         p {
           margin-top: 4vh;
-          font-size: 1.2em;
+          font-size: 1rem;
           letter-spacing: 0.2vw;
-          line-height: 1.8em;
+          line-height: 1.6em;
+        }
+
+        .bouton {
+          text-align: center;
         }
 
         .bouton a {
-          line-height: 18vh;
+          line-height: 10vh;
           text-align: center;
           vertical-align: middle;
           color: red;
           text-decoration: none;
           margin: auto;
-          font-size: 1.4em;
+          font-size: 1.4rem;
           border-radius: 8px;
-          padding: 1vw;
+          padding: 0vw;
         }
 
         .bouton a:hover {
@@ -265,3 +246,15 @@ main {
     }
   }
 }
+@media screen and (max-width: 767px) {
+  main {
+      @include flex_column();
+      .black_bg  {
+        @include flex_column();
+        .watch_1 {
+        }
+        .text_watch_1 {
+        }
+      }
+    }
+  }
