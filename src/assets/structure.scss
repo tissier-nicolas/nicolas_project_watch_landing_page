@@ -221,26 +221,60 @@ main {
           line-height: 1.6em;
         }
 
-        .bouton {
-          text-align: center;
+        .frame {
+        	margin-top: 6vh;
+        	border-radius: 2px;
+        	box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+        	overflow: hidden;
+        	color: red;
+        	-webkit-font-smoothing: antialiased;
+        	-moz-osx-font-smoothing: grayscale;
+        	display: flex;
+        	justify-content: center;
+        	align-items: center;
         }
 
-        .bouton a {
-          line-height: 10vh;
-          text-align: center;
-          vertical-align: middle;
-          color: red;
-          text-decoration: none;
-          margin: auto;
-          font-size: 1.4rem;
-          border-radius: 8px;
-          padding: 0vw;
-        }
+        .button {
+        	display: flex;
+        	align-items: center;
+        	justify-content: center;
+        	cursor: pointer;
 
-        .bouton a:hover {
-          background-color: white;
-          color: black;
-          text-align: center;
+        	svg {
+        		height: 55px;
+        		width: 150px;
+        		fill: none;
+        		stroke-width: 5;
+
+        		.o1 {
+        			transition: all 1s ease-in-out;
+        		}
+        		.o2 {
+        			stroke: white;
+        			stroke-dasharray: 20 420;
+        			stroke-dashoffset: 20;
+        			transition: all 1s ease-in-out;
+        		}
+        	}
+
+        	span {
+        		position: absolute;
+        		margin: auto 0;
+        		text-transform: uppercase;
+        		letter-spacing: 3px;
+            font-size: 1.2rem;
+
+        	}
+
+        	&:hover {
+        		.o1{
+        			fill: rgba(#fff, 0);
+        		}
+
+        		.o2 {
+        			stroke-dashoffset: -420;
+        		}
+        	}
         }
       }
     }
